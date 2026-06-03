@@ -33,7 +33,7 @@ function Form({
         className={inputClass}
       />
 
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select value={category} className={`${inputClass} cursor-pointer`} onChange={(e) => setCategory(e.target.value)}>
         <option value="select" disabled>
           — Category —
         </option>
