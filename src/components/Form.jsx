@@ -1,4 +1,12 @@
-function Form({ title, setTitle, amount, setAmount, category, setCategory, addExpense }) {
+function Form({
+  title,
+  setTitle,
+  amount,
+  setAmount,
+  category,
+  setCategory,
+  addExpense,
+}) {
   const inputClass =
     "w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition";
 
@@ -25,15 +33,29 @@ function Form({ title, setTitle, amount, setAmount, category, setCategory, addEx
         className={inputClass}
       />
 
-      <select
-        onChange={(e) => setCategory(e.target.value)}
-        value={category}
-        className={`${inputClass} cursor-pointer`}
-      >
-        <option value="select" disabled>— Category —</option>
-        <option value="food">Food</option>
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="select" disabled>
+          — Category —
+        </option>
+
+        <option value="food">Food and Dining</option>
+        <option value="groceries">Groceries</option>
         <option value="transportation">Transportation</option>
+        <option value="travel">Travel</option>
         <option value="entertainment">Entertainment</option>
+        <option value="shopping">Shopping</option>
+        <option value="bills">Bills & Utilities</option>
+        <option value="rent">Rent / Housing</option>
+        <option value="health">Health</option>
+        <option value="education">Education</option>
+        <option value="subscriptions">Subscriptions</option>
+        <option value="investment">Investment</option>
+        <option value="emi">EMI / Loans</option>
+        <option value="fitness">Fitness</option>
+        <option value="personal">Personal Care</option>
+        <option value="gifts">Gifts</option>
+        <option value="business">Business</option>
+        <option value="other">Other</option>
       </select>
 
       <button
